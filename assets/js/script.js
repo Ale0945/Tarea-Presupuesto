@@ -12,7 +12,7 @@ const expensesList = document.getElementById('expensesList');
 
 // Funciones de flecha
 const calculateBudget = () => {
-  budget = parseFloat(budgetInput.value);
+  budget = Number(budgetInput.value);
   budgetValueElement.textContent = budget.toFixed(2);
   updateBalance();
 };
@@ -20,12 +20,14 @@ const calculateBudget = () => {
 const updateBalance = () => {
   const totalExpenses = expenses.reduce((total, expense) => total + expense.amount, 0);
   balance = budget - totalExpenses;
+  const gastos= document.getElementById("gastos")
+  gastos.textContent = totalExpenses
   balanceValueElement.textContent = balance.toFixed(2);
 };
 
 const addExpense = () => {
   const name = expenseNameInput.value;
-  const amount = parseFloat(expenseAmountInput.value);
+  const amount = Number(expenseAmountInput.value);
 
   if (name.trim() === '' || isNaN(amount) || amount <= 0) {
     alert('Ingrese un nombre y un valor válido para el gasto.');
