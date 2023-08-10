@@ -14,10 +14,16 @@
     <main class="container">
         <section class="row">
             <h2 class="col-12 text-center">Presupuesto APP</h2>
-            <div class="container1 col-6">
-                Ingresa Tu Presupuesto
-                <input type="number" id="budgetInput" placeholder="Ingrese su presupuesto">
-                <button onclick="calculateBudget()">Calcular</button>
+            <div class="container1 col-12 col-md-6">
+                <div>
+                    <p>Ingresa Tu Presupuesto</p>
+                </div>
+                <div class="mb-2">
+                    <input type="number" id="budgetInput" placeholder="Ingrese tu presupuesto">
+                </div>
+                <div>
+                    <button onclick="calculateBudget()">Calcular</button>
+                </div>
             </div>
             <div class="result col-6">
                 <div>
@@ -32,14 +38,14 @@
             </div>
         </section>
         <section class="row">
-            <div class="container2 col-6">
+            <div class="container2 col-12 col-md-6">
                 <div>
                     <div>
-                        Ingresa El Nombre Del Gasto
+                        <p>Ingresa El Nombre Del Gasto</p>
                         <input type="text" id="expenseName" placeholder="Nombre del gasto">
                     </div>
-                    <div>
-                        Ingresa La Cantidad del Gasto
+                    <div class="mt-2 mb-2">
+                        <p>Ingresa La Cantidad del Gasto</p>
                         <input type="number" id="expenseAmount" placeholder="Valor del gasto">
                     </div>
                     <button onclick="addExpense()">Añadir Gasto</button>

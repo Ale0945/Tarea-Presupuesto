@@ -2,7 +2,7 @@ let budget = 0;
 let balance = 0;
 let expenses = [];
 
-// Variables de ES6
+
 const budgetInput = document.getElementById('budgetInput');
 const budgetValueElement = document.getElementById('budgetValue');
 const balanceValueElement = document.getElementById('balanceValue');
@@ -10,7 +10,7 @@ const expenseNameInput = document.getElementById('expenseName');
 const expenseAmountInput = document.getElementById('expenseAmount');
 const expensesList = document.getElementById('expensesList');
 
-// Funciones de flecha
+
 const calculateBudget = () => {
   budget = Number(budgetInput.value);
   budgetValueElement.textContent = budget.toFixed(2);
@@ -65,15 +65,15 @@ const clearExpenseInputs = () => {
   expenseAmountInput.value = '';
 };
 
-// Bucle if
+
 if (budgetInput.value === '') {
   budgetInput.placeholder = 'Ingrese su presupuesto';
 }
 
-// Bucle for
+
 for (let i = 0; i < expenses.length; i++) {
   console.log(expenses[i].name, expenses[i].amount);
 }
 
-// Inicializar la aplicación
+
 updateBalance();
